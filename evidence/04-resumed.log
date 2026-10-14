@@ -1,0 +1,22 @@
+$ uname -a
+Linux lubancat 4.19.232 #25 SMP Sat Apr 18 14:08:18 CST 2026 aarch64 aarch64 aarch64 GNU/Linux
+$ sparse_downloader download source.bin download.bin 65536
+Resume at offset=32768 / 262144
+completed_offset=98304 progress=37.50%
+completed_offset=163840 progress=62.50%
+completed_offset=229376 progress=87.50%
+completed_offset=262144 progress=100.00%
+Download complete.
+$ sparse_downloader status download.bin
+File: /home/cat/sparse-downloader-20261012-BvJMQb/final/sparse-downloader/evidence/demo-2_qz3yo8/download.bin
+logical_bytes=262144
+allocated_512b_blocks=512
+allocated_bytes=262144
+hole_ratio_estimate=0.00%
+completed_offset=262144
+progress=100.00%
+state=complete
+$ sha256sum source.bin download.bin
+2312394bd99545d9de131c24efb781e765ac1aec243f2ed9347597a793a415e9  /home/cat/sparse-downloader-20261012-BvJMQb/final/sparse-downloader/evidence/demo-2_qz3yo8/source.bin
+2312394bd99545d9de131c24efb781e765ac1aec243f2ed9347597a793a415e9  /home/cat/sparse-downloader-20261012-BvJMQb/final/sparse-downloader/evidence/demo-2_qz3yo8/download.bin
+Byte-for-byte comparison: PASS

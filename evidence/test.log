@@ -1,0 +1,30 @@
+python3 tests/test_downloader.py ./sparse_downloader
+PASS 01: create: logical size is 128 KiB
+PASS 02: create: disk allocation is smaller than logical size (sparse filesystem required)
+PASS 03: unwritten hole reads as zero bytes
+PASS 04: positioned write preserves other regions and file size
+PASS 05: status reports size, allocation and hole ratio
+PASS 06: out-of-range write does not alter data
+PASS 07: create refuses to overwrite existing file
+PASS 08: invalid sizes are rejected without creating a target
+PASS 09: concurrent downloader is rejected by the file lock
+PASS 10: concurrent manual writer is rejected by the file lock
+PASS 11: SIGINT stops cleanly and records a partial offset
+PASS 12: partial transfer keeps full logical size and unwritten holes
+PASS 13: restart uses persisted offset
+PASS 14: resumed binary output matches source byte for byte
+PASS 15: complete status is correct
+PASS 16: completed download is safe to run again
+PASS 17: manual writes cannot invalidate a download record
+PASS 18: forced kill leaves a readable checkpoint
+PASS 19: forced-kill recovery produces identical data
+PASS 20: source/target hard-link alias is rejected without truncation
+PASS 21: symlink destination is rejected
+PASS 22: corrupt metadata is rejected
+PASS 23: overflowing metadata integer is rejected
+PASS 24: existing unrelated target data is preserved
+PASS 25: altered completed prefix is detected
+PASS 26: replaced target inode is detected
+PASS 27: source modification is detected
+PASS 28: download source smaller than 128 KiB is rejected
+ALL 28 TESTS PASSED

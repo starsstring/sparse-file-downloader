@@ -1,0 +1,13 @@
+$ uname -a
+Linux lubancat 4.19.232 #25 SMP Sat Apr 18 14:08:18 CST 2026 aarch64 aarch64 aarch64 GNU/Linux
+$ sparse_downloader write hole.bin 65536 HELLO
+Written: offset=65536 bytes=5
+$ sparse_downloader status hole.bin
+File: /home/cat/sparse-downloader-20261012-BvJMQb/final/sparse-downloader/evidence/demo-2_qz3yo8/hole.bin
+logical_bytes=131072
+allocated_512b_blocks=16
+allocated_bytes=8192
+hole_ratio_estimate=93.75%
+state=no_download_record
+$ od -An -tx1 -j 65532 -N 16 hole.bin
+ 00 00 00 00 48 45 4c 4c 4f 00 00 00 00 00 00 00

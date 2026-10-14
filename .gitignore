@@ -1,0 +1,7 @@
+sparse_downloader
+__pycache__/
+*.pyc
+*.bin
+*.resume
+*.resume.tmp.*
+evidence/demo-*/

@@ -1,0 +1,17 @@
+$ uname -a
+Linux lubancat 4.19.232 #25 SMP Sat Apr 18 14:08:18 CST 2026 aarch64 aarch64 aarch64 GNU/Linux
+$ sparse_downloader download source.bin download.bin 16384 150
+Start at offset=0 / 262144
+completed_offset=16384 progress=6.25%
+completed_offset=32768 progress=12.50%
+Paused safely at offset=32768; run the same command to resume.
+SIGINT sent (same signal as Ctrl+C); exit_code=130
+$ sparse_downloader status download.bin
+File: /home/cat/sparse-downloader-20261012-BvJMQb/final/sparse-downloader/evidence/demo-2_qz3yo8/download.bin
+logical_bytes=262144
+allocated_512b_blocks=64
+allocated_bytes=32768
+hole_ratio_estimate=87.50%
+completed_offset=32768
+progress=12.50%
+state=paused

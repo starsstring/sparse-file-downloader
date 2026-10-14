@@ -1,0 +1,13 @@
+$ uname -a
+Linux lubancat 4.19.232 #25 SMP Sat Apr 18 14:08:18 CST 2026 aarch64 aarch64 aarch64 GNU/Linux
+$ sparse_downloader create hole.bin 131072
+Created: /home/cat/sparse-downloader-20261012-BvJMQb/final/sparse-downloader/evidence/demo-2_qz3yo8/hole.bin, logical_bytes=131072
+$ sparse_downloader status hole.bin
+File: /home/cat/sparse-downloader-20261012-BvJMQb/final/sparse-downloader/evidence/demo-2_qz3yo8/hole.bin
+logical_bytes=131072
+allocated_512b_blocks=8
+allocated_bytes=4096
+hole_ratio_estimate=96.88%
+state=no_download_record
+$ ls -ls hole.bin
+4 -rw-r--r-- 1 cat cat 131072 Jun 18 04:34 /home/cat/sparse-downloader-20261012-BvJMQb/final/sparse-downloader/evidence/demo-2_qz3yo8/hole.bin
